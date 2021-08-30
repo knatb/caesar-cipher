@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #383838;
+}
+
+.title{
+    height: 150px;
+    background-color: #202020;
+    color: #fff;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.input-flex{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-div{
+    width: 600px;
+}
+
+.input-text{
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+}
+
+.buttons{
+    width: 300px;
+}

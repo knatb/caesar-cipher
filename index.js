@@ -4,7 +4,9 @@ var numDesplazamientos = document.getElementById("numDes");
 var btnCifrar = document.getElementById("cifrar");
 var btnDescifrar = document.getElementById("descifrar");
 
-window.onload = function(){
+window.onload = function(e){
+
+    e.preventDefault();
 
     btnCifrar.addEventListener("click", function(){
        let texto = mensaje.value;

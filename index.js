@@ -19,22 +19,22 @@ window.onload = function(){
      });
  
      function cifrar(texto, desplazamiento){
-         let resultado = "";
-         let abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let resultado = "";
+        let abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // el valor se encuentra entre 0 y 25
+        desplazamiento = (desplazamiento % 26 + 26) % 26;
 
-         desplazamiento = (desplazamiento % 26 + 26) % 26;
-
-         if(texto){
-             for(let i = 0; i<texto.length; i++){
-                 if(abecedario.indexOf(texto[i] != -1)){
-                     let posicion = ((abecedario.indexOf(texto[i])+desplazamiento)%26);
-                     
-                      resultado += abecedario[posicion];
-                 } else {
-                     resultado += texto[i];
-                 }
-             }
-         } return resultado;
+        if(texto){
+            for(let i = 0; i<texto.length; i++){
+            if(abecedario.indexOf(texto[i]) != -1){
+                //en qué posición del arreglo se encuentra la letra correspondiente
+                let posicion = ((abecedario.indexOf(texto[i])+desplazamiento)%26);                
+                    resultado += abecedario[posicion];
+                } else {
+                    resultado += texto[i];
+                }
+            }
+        } return resultado;
      }
 
      function descifrar(texto, desplazamiento){
@@ -45,7 +45,7 @@ window.onload = function(){
 
         if(texto){
             for(let i = 0; i<texto.length; i++){
-                if(abecedario.indexOf(texto[i] != -1)){
+                if(abecedario.indexOf(texto[i]) != -1){
                     let posicion = ((abecedario.indexOf(texto[i]) - desplazamiento)%26);
                     
                      resultado += abecedario[posicion];
